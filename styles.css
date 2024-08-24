@@ -1,0 +1,155 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --header-basis: 20%;
+    --main-basis: 70%;
+    --footer-basis: 10%;
+    --pancrasio-color: rgb(255, 26, 26);
+    --pepe-color: rgb(241, 232, 50);
+    --ya_wey-color: black;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    background-color: var(--pancrasio-color);
+    justify-content: space-between;
+    padding: 0% 30px;
+    flex-basis: var(--header-basis);
+
+    #section_header_1 {
+        width: 30%;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        #logo {
+            width: 100px;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: var(--pepe-color);
+        }
+    }
+
+    #section_header_2 {
+        min-width: 30%;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        a {
+            font-size: 20px;
+            color: var(--pepe-color);
+            text-decoration: none;
+            font-weight: 900;
+        }
+
+        button {
+            display: none;
+        }
+    }
+
+    
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: var(--main-basis);
+
+    #section_main_1 {
+        background-color: var(--pepe-color);
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #section_main_2 {
+        width: 50%;
+
+        #payaso {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+footer {
+    background-color: var(--pancrasio-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: var(--footer-basis);
+    padding: 0% 4%; 
+
+    #section_footer_1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h4 {
+            font-size: 18px;
+            font-weight: 900;
+            margin: 0px;
+            color: var(--ya_wey-color);
+        }
+
+        ul {
+            margin: 0px;
+        }
+
+        li {
+            color: var(--ya_wey-color);
+        }
+    }
+
+    #section_footer_2 {
+        p {
+            color: var(--ya_wey-color);
+        }
+    }
+}
+
+@media (max-width: 730px) {
+    
+    header {
+
+        #section_header_2 {
+
+            min-width: 10%;
+
+            a {
+                display: none;
+            }
+
+            button {
+                display: block;
+                max-width: 50px;
+                max-height: 50px;
+                background-color: transparent;
+                border: none;
+                
+                #menu_img {
+                    width: 100%;
+                }
+            } 
+        }
+
+           
+    }
+
+}
